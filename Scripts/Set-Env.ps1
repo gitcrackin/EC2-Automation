@@ -3,6 +3,9 @@
   Purpose: Set the environment for the EC2 API tools.
 #>
 
+# Determine the Windows version
+$osVerArray = [System.Environment]::OSVersion.Version
+
 # Set PoSH environment
 $JAVA_HOME="C:\Program Files (x86)\Java\jre7"
 $EC2_HOME="C:\Program Files (x86)\ec2-api-tools-1.6.5.2"
