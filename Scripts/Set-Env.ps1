@@ -72,5 +72,5 @@ $env:Path = $env:EC2_HOME + "\bin;" + $env:JAVA_HOME + "\bin;" + $env:Path
 # AWS_ACCESS_KEY with the -O option of the EC2 API tools.
 # AWS_SECRET_KEY with the -W option of the EC2 API tools. 
 # ex. ec2-describe-regions -O $AWS_ACCESS_KEY -W $AWS_SECRET_KEY
-$AWS_ACCESS_KEY = Read-Host -AsSecureString "Enter your AWS Access Key ID: "
-$AWS_SECRET_KEY = Read-Host -AsSecureString "Enter your AWS Secret Access Key: "
+$global:AWS_ACCESS_KEY = Read-Host -AsSecureString "Enter your AWS Access Key ID: "
+$global:AWS_SECRET_KEY = Read-Host -AsSecureString "Enter your AWS Secret Access Key: "
