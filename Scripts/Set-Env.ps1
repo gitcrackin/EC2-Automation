@@ -43,23 +43,24 @@ if($buildVersion.Major -ge 6){
 		}
 	}
 	$env:JAVA_HOME='C:\Program Files (x86)\Java\jre'+[string]$latestVer
+	$JAVA_HOME='C:\Program Files (x86)\Java\jre'+[string]$latestVer
 }
 else{
 	$latestVer = 0
-	ls 'C:\Program Files (x86)\Java' | %{
+	ls 'C:\Program Files\Java' | %{
 		$jreDir = $_.Name
 		$index = [int]"$($jreDir[-1])"
 		if($index -gt $latestVer){
 			$latestVer = $index
 		}
 	}
-	$env:JAVA_HOME='C:\Program Files (x86)\Java\jre'+[string]$latestVer
+	$env:JAVA_HOME='C:\Program Files\Java\jre'+[string]$latestVer
+	$JAVA_HOME='C:\Program Files\Java\jre'+[string]$latestVer
 }
 
 # Search for JRE in Program Files
 
 # Set PoSH environment
-$JAVA_HOME='C:\Program Files (x86)\Java\jre'+[string]$latestVer
 $EC2_HOME="C:\Program Files (x86)\ec2-api-tools-1.6.5.2"
 
 # Set CMD environment
